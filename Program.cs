@@ -15,7 +15,8 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "MpesaDarajaAPI", Version = "v1" });
 });
 
-builder.Services.AddDbContext<PayrollContext>(options => options.UseSqlServer(configuration.GetConnectionString("DevConnection")));
+//Todo Connection to Database
+//builder.Services.AddDbContext<PayrollContext>(options => options.UseSqlServer(configuration.GetConnectionString("DevConnection")));
 
 var app = builder.Build();
 var env = builder.Environment;
