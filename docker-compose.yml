@@ -8,11 +8,11 @@ services:
     restart: unless-stopped
     user: root
     environment:
-      SA_PASSWORD: "pass@word1"
+      SA_PASSWORD: "${DB_PASSWORD}"
       ACCEPT_EULA: "Y"
-      MSSQL_PID: "Express"
+      MSSQL_PID: "${MSSQL_PID}"
     ports:
-      - "1451:1433"
+      - "${SQL_PORT}:1433"
     volumes:
           - './docker/volumes/sqlserver/data:/var/opt/mssql/data'
           - './docker/volumes/sqlserver/log:/var/opt/mssql/log'
