@@ -10,35 +10,38 @@ namespace MpesaDarajaAPI.Models
         public int id { get; set; }
 
         [Required,StringLength(50)]
-        public string TransactionType { get; set; }
+        public string transactionType { get; set; }
 
         [Required, StringLength(50)]
-        public string TransID { get; set; }
+        public string transactionId { get; set; }
         [Required]
-        public DateTime TransTime { get; set; }
+        public DateTime transTime { get; set; }
 
         [Required]
         [Column(TypeName = "Decimal (38,2)")]
-        public string TransAmount { get; set; }
+        public string transAmount { get; set; }
         [Required, StringLength(50)]
-        public string BusinessShortCode { get; set; }
+        public string businessShortCode { get; set; }
         [Required, StringLength(50)]
-        public string BillRefNumber { get; set; }
+        public string billRefNumber { get; set; }
         [Required]
         [Column(TypeName = "Decimal (38,2)")]
-        public string OrgAccountBalance { get; set; }
+        public string orgAccountBalance { get; set; }
         [Required, StringLength(50)]
-        public string ThirdPartyTransID { get; set; }
+        public string thirdPartyTransID { get; set; }
         [Required, StringLength(50)]
         public string MSISDN { get; set; }
         [Required, StringLength(50)]
-        public string FirstName { get; set; }
+        public string firstName { get; set; }
         [Required, StringLength(50)]
-        public string MiddleName { get; set; }
+        public string middleName { get; set; }
         [Required, StringLength(50)]
-        public string LastName { get; set; }
+        public string lastName { get; set; }
         [Required]
         public DateTime created_at { get; set; }
+
+        [Required, StringLength(20)]
+        public string responseCode { get; set; }
 
         public MpesaTransaction()
         {
