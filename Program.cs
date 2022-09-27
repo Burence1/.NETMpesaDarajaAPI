@@ -1,4 +1,7 @@
 using Microsoft.OpenApi.Models;
+using MpesaDarajaAPI.Data;
+using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,8 +18,7 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "MpesaDarajaAPI", Version = "v1" });
 });
 
-//Todo Connection to Database
-//builder.Services.AddDbContext<PayrollContext>(options => options.UseSqlServer(configuration.GetConnectionString("DevConnection")));
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DevConnection")));
 
 var app = builder.Build();
 var env = builder.Environment;
