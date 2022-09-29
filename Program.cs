@@ -23,8 +23,9 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(conf
 var app = builder.Build();
 var env = builder.Environment;
 
+app.UseAuthorization();
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+if (env.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
     app.UseSwagger();
@@ -33,7 +34,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
 
 app.MapControllers();
 

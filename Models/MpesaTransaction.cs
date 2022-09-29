@@ -19,14 +19,14 @@ namespace MpesaDarajaAPI.Models
 
         [Required]
         [Column(TypeName = "Decimal (38,2)")]
-        public string transAmount { get; set; }
+        public decimal transAmount { get; set; }
         [Required, StringLength(50)]
         public string businessShortCode { get; set; }
         [Required, StringLength(50)]
         public string billRefNumber { get; set; }
         [Required]
         [Column(TypeName = "Decimal (38,2)")]
-        public string orgAccountBalance { get; set; }
+        public decimal orgAccountBalance { get; set; }
         [Required, StringLength(50)]
         public string thirdPartyTransID { get; set; }
         [Required, StringLength(50)]
