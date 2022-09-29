@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PkEas3qfZn77TGBeSaf5UnkSp8NUzUFc3o+mTx62MZV5KOJs3ADBpT3eCEL0OcAa3vjUUeiOVbrJoJ7qDBD/Bg==",
+  "dgSpecHash": "fqv1H5iL7N3peR0kXEedyF4xe3rqFFtV1fEWbyvaJQtGijVddS6w4pSQ2cz4HBQHYqnnvZoHGSnxaywJNn2ZXw==",
   "success": true,
   "projectFilePath": "C:\\Users\\bomondi\\Desktop\\Burens\\MpesaDarajaAPI\\MpesaDarajaAPI.csproj",
   "expectedPackageFiles": [
@@ -37,6 +37,7 @@
     "C:\\Users\\bomondi\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\bomondi\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\bomondi\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\bomondi\\.nuget\\packages\\restsharp\\108.0.2\\restsharp.108.0.2.nupkg.sha512",
     "C:\\Users\\bomondi\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\bomondi\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\bomondi\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
