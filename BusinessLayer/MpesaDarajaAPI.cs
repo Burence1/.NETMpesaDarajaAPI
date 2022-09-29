@@ -59,7 +59,7 @@ public class MpesaDarajaAPI
         }
     }
 
-    public async Task<(S SuccessResponse, ErrorResponse errorResponse, bool IsSuccessful)> MpesaRequestAsync<S>(
+    public async Task<(S SuccessResponse, ErrorResponse errorResponse, bool IsSuccessful)> MpesaPostRequestsAsync<S>(
         string resourceUrl, string data) where S : new()
     {
         try
@@ -94,15 +94,23 @@ public class MpesaDarajaAPI
     }
 
 
-    private async Task<MpesaResponse> CommonRequestAsync(string url, string payload)
+    private async Task<MpesaResponse> MpesaRequestsAsync(string url, string payload)
     {
-        var res = await MpesaRequestAsync<CommonSuccessResponse>(url, payload);
-        return new MpesaResponse()
+        try
         {
-            ErrorResponse = res.errorResponse,
-            SuccessResponse = res.SuccessResponse,
-            IsSuccess = res.IsSuccessful
-        };
+            var result = await MpesaPostRequestsAsync<CommonSuccessResponse>(url, payload);
+            return new MpesaResponse()
+            {
+                ErrorResponse = result.errorResponse,
+                SuccessResponse = result.SuccessResponse,
+                IsSuccess = result.IsSuccessful
+            };
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        
     }
 
 }
