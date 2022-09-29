@@ -9,5 +9,10 @@ namespace MpesaDarajaAPI.Data
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) {}
 
         public DbSet<MpesaTransaction> MpesaTransactions{ get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder) {
+            base.OnModelCreating(modelBuilder);
+        }
+       
 }
 }
