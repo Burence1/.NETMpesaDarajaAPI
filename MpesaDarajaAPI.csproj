@@ -22,6 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Dtos\Reponses\" />
+    <Folder Include="Dtos\Requests\" />
     <Folder Include="Enums\" />
   </ItemGroup>
 
