@@ -124,4 +124,26 @@ public class MpesaDarajaAPI
             IsSuccess = response.IsSuccessful
         };
     }
+
+    private async Task<STKPushQueryResponse> STKPushQueryAsync(STKQueryRequest request)
+    {
+        var response =
+            await MpesaPostRequestsAsync<StkPushQuerySuccessResponse>("mpesa/stkpushquery/v1/query", request.ToString());
+        return new STKPushQueryResponse()
+        {
+            ErrorResponse = response.errorResponse,
+            SuccessResponse = response.SuccessResponse,
+            IsSuccess = response.IsSuccessful
+        };
+    }
+
+    private Task<MpesaResponse> B2CAsync(B2CRequest request)
+    {
+        return MpesaRequestsAsync("mpesa/b2c/v1/paymentrequest", request.ToString());
+    }
+
+    private Task<MpesaResponse> B2BAsync(B2BRequest request)
+    {
+        return MpesaRequestsAsync("mpesa/b2b/v1/paymentrequest", request.ToString());
+    }
 }
