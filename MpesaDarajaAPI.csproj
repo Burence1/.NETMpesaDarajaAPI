@@ -23,7 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Dtos\Requests\" />
     <Folder Include="Enums\" />
     <Folder Include="BusinessLayer\" />
   </ItemGroup>
