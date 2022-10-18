@@ -110,7 +110,18 @@ public class MpesaDarajaAPI
         {
             throw e;
         }
-        
     }
 
+
+    private async Task<STKPushResponse> STKPushAsync(STKPushRequest request)
+    {
+        var response =
+            await MpesaPostRequestsAsync<StkPushSuccessResponse>("mpesa/stkpush/v1/processrequest", request.ToString());
+        return new STKPushResponse()
+        {
+            ErrorResponse = response.errorResponse,
+            SuccessResponse = response.SuccessResponse,
+            IsSuccess = response.IsSuccessful
+        };
+    }
 }
