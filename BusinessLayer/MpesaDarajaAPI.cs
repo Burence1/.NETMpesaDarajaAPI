@@ -146,4 +146,32 @@ public class MpesaDarajaAPI
     {
         return MpesaRequestsAsync("mpesa/b2b/v1/paymentrequest", request.ToString());
     }
+
+    private Task<MpesaResponse> C2BRegUrlAsync(C2BRegisterUrlRequest request)
+    {
+        return MpesaRequestsAsync("mpesa/c2b/v1/registerurl", request.ToString());
+    }
+
+
+    private Task<MpesaResponse> C2BTransationAsync(C2BRequest request)
+    {
+        return MpesaRequestsAsync("mpesa/c2b/v1/simulate", request.ToString());
+    }
+
+    private Task<MpesaResponse> AccBalanceAsync(AccountBalRequest request)
+    {
+        return MpesaRequestsAsync("mpesa/accountbalance/v1/query", request.ToString());
+    }
+
+
+    private Task<MpesaResponse> TransStatusAsync(TransactionStatusRequest request)
+    {
+        return MpesaRequestsAsync("mpesa/transactionstatus/v1/query", request.ToString());
+    }
+
+
+    private Task<MpesaResponse> ReversalAsync(ReversalRequest request)
+    {
+        return MpesaRequestsAsync("mpesa/reversal/v1/request", request.ToString());
+    }
 }
