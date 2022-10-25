@@ -147,7 +147,7 @@ public class MpesaDarajaAPI
         return MpesaRequestsAsync("mpesa/b2b/v1/paymentrequest", request.ToString());
     }
 
-    private Task<MpesaResponse> C2BRegUrlAsync(C2BRegisterUrlRequest request)
+    public Task<MpesaResponse> C2BRegUrlAsync(C2BRegisterUrlRequest request)
     {
         return MpesaRequestsAsync("mpesa/c2b/v1/registerurl", request.ToString());
     }
